@@ -9,7 +9,7 @@ echo "Uploading files..."
 WDEFAULT_LOCAL_DIR=${LOCAL_DIR:-"."}
 WDEFAULT_REMOTE_DIR=${REMOTE_DIR:-"."}
 
-if [ $FTP_LOCAL_SERVER != "" ]; then
+if [ $FTP_LOCAL_SERVER == "true" ]; then
     echo "LFTP LOCAL_SERVER -> PROD_SERVER..."
 
     #Entry LOCAL SERVER
