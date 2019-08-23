@@ -25,7 +25,7 @@ else
     set +e
     git config git-ftp.url $FTP_DEST
     git config git-ftp.user $FTP_USER
-    git config git-ftp.password $FTP_PW
+    git config git-ftp.password $FTP_PWD
     
     git ftp init
     exit_code=$?
