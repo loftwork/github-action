@@ -23,7 +23,7 @@ if [ $FTP_LOCAL_SERVER == "true" ]; then
 else
     echo "LFTP LOCAL_DIR -> PROD_SERVER..."
 
-    lftp $FTP_SERVER -u $FTP_USERNAME,$FTP_PASSWORD -e "set ftp:ssl-allow no; mirror -R $WDEFAULT_LOCAL_DIR $WDEFAULT_REMOTE_DIR; quit"
+    lftp $FTP_SERVER -u $FTP_USERNAME,$FTP_PASSWORD -e "set ftp:ssl-allow no; mirror --reverse --delete --only-newer $WDEFAULT_LOCAL_DIR $WDEFAULT_REMOTE_DIR; quit"
 
 fi
 
