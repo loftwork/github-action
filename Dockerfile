@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM debian:stretch
 
 LABEL version="1.0.0"
 LABEL repository="https://github.com/loftwork/gtihub-action"
