@@ -10,15 +10,14 @@ echo "master branch -> PROD_SERVER..."
 set +e
 
 echo "FTP_DEST=${FTP_DEST} FTP_USER=${FTP_USER} FTP_PWD=${FTP_PWD}"
-if [ $KEY != "" ]; then
-    echo $KEY > ./id_rsa
-fi
+#if [ $KEY != "" ]; then
+#    echo $KEY > ./id_rsa
+#fi
 
-git config git-ftp.url "sftp://ftp-test.loftwork.work/var/www/vhosts/ftp-test/"
+git config git-ftp.url "ftps://ftp-test.loftwork.work/"
 
 git config git-ftp.user $FTP_USER
-#git config git-ftp.password $FTP_PWD
-git config git-ftp.key ./id_rsa
+git config git-ftp.password $FTP_PWD
 
     git ftp init
     exit_code=$?
