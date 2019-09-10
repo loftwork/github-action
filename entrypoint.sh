@@ -14,7 +14,7 @@ echo "FTP_DEST=${FTP_DEST} FTP_USER=${FTP_USER} FTP_PWD=${FTP_PWD}"
 #    echo $KEY > ./id_rsa
 #fi
 
-git config git-ftp.url "ftps://ftp-test.loftwork.work/"
+git config git-ftp.url "ftpes://ftp-test.loftwork.work/"
 
 git config git-ftp.user $FTP_USER
 git config git-ftp.password $FTP_PWD
