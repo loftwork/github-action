@@ -17,10 +17,10 @@ git config git-ftp.url $FTP_DEST
 git config git-ftp.user $FTP_USER
 git config git-ftp.password $FTP_PWD
 
-    git ftp -vv --insecure init
+    git ftp -vv init
     exit_code=$?
     if [ "$exit_code" -ne 0 ]; then
-        git ftp -vv --insecure push
+        git ftp -vv push
     fi
 
 echo "FTP Deploy Complete"
